@@ -2,7 +2,7 @@ function clockCall(){
     const now = new Date();
 
     const hours24 = now.getHours().toString().padStart(2,'0');
-    const hours12 = hours24 % 12 || 12; 
+     const hours12 = (hours24 % 12 || 12).toString().padStart(2,'0'); 
     const minutes = now.getMinutes().toString().padStart(2,'0');
     const seconds = now.getSeconds().toString().padStart(2,'0');
     const ampm = hours24 >= 12 ? 'AM' : 'PM';
